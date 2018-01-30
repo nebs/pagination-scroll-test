@@ -97,6 +97,24 @@ class ViewController: UIViewController {
 //            let targetIndexPath = IndexPath(row: targetIndex, section: 0)
 //            self.tableView.scrollToRow(at: targetIndexPath, at: .top, animated: false)
 //        }
+
+        // ATTEMPT #5 - [ RELOAD DATA WITH SCROLL POSITION AND RELATIVE OFFSET ]
+//        var currentMessage: Message? = nil
+//        var offsetFromTopOfMessage: CGFloat = 0
+//        if let topIndexPath = self.tableView.indexPathsForVisibleRows?.first {
+//            var topMessageRect = self.tableView.rectForRow(at: topIndexPath)
+//            topMessageRect = topMessageRect.offsetBy(dx: -tableView.contentOffset.x, dy: -tableView.contentOffset.y)
+//            offsetFromTopOfMessage = topMessageRect.minY
+//            currentMessage = self.messages[topIndexPath.row]
+//        }
+//        self.generateMoreMessages()
+//        self.tableView.reloadData()
+//        if let targetMessage = currentMessage,
+//            let targetIndex = (self.messages.index{$0.title == targetMessage.title}) {
+//            let targetIndexPath = IndexPath(row: targetIndex, section: 0)
+//            self.tableView.scrollToRow(at: targetIndexPath, at: .top, animated: false)
+//            self.tableView.contentOffset.y -= offsetFromTopOfMessage
+//        }
     }
 
     override func viewDidLoad() {
